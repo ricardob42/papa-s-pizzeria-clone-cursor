@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mini Pizzería - Gestión de Pedidos</title>
+    <meta name="description" content="Videojuego web inspirado en Papa’s Pizzeria con gestión de pedidos, preparación, horno y atención al cliente." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="app-header">
+      <h1>Mini Pizzería</h1>
+      <div class="hud">
+        <div>Día: <span id="day">1</span></div>
+        <div>Puntuación: <span id="score">0</span></div>
+        <div>Clientes restantes: <span id="customersLeft">0</span></div>
+      </div>
+    </header>
+
+    <main class="layout">
+      <aside class="queue" aria-label="Cola de clientes">
+        <h2>Clientes</h2>
+        <ul id="queueList" class="queue-list"></ul>
+      </aside>
+
+      <section class="stage">
+        <canvas id="gameCanvas" width="920" height="600" aria-label="Zona de preparación y horno"></canvas>
+        <div id="toast" class="toast" role="status" aria-live="polite"></div>
+      </section>
+
+      <aside class="panel" aria-label="Panel de control">
+        <h2>Pedido Actual</h2>
+        <div id="orderDetails" class="order-details"></div>
+
+        <div class="controls">
+          <h3>Preparación</h3>
+          <div class="row">
+            <button id="btnSauce" class="btn">Añadir Salsa</button>
+            <button id="btnCheese" class="btn">Añadir Queso</button>
+          </div>
+
+          <h3>Toppings</h3>
+          <div class="toppings">
+            <button data-top="pepperoni" class="btn top">Pepperoni</button>
+            <button data-top="mushroom" class="btn top">Champiñón</button>
+            <button data-top="olive" class="btn top">Aceituna</button>
+          </div>
+          <p class="hint">Selecciona un topping y haz clic en la pizza para colocarlo.</p>
+
+          <h3>Horno</h3>
+          <div class="row">
+            <button id="btnBake" class="btn primary">Hornear</button>
+            <button id="btnStopBake" class="btn">Detener</button>
+          </div>
+
+          <h3>Entrega</h3>
+          <div class="row">
+            <button id="btnServe" class="btn success">Servir</button>
+            <button id="btnTrash" class="btn danger">Tirar</button>
+          </div>
+        </div>
+
+        <div class="divider"></div>
+        <div class="day-controls">
+          <button id="btnStartDay" class="btn primary large">Comenzar Día</button>
+          <button id="btnNextDay" class="btn large" style="display:none;">Siguiente Día</button>
+        </div>
+      </aside>
+    </main>
+
+    <footer class="app-footer">
+      <small>Hecho con ❤️ para GitHub Pages. Controles: clic para colocar toppings, botones para hornear y servir.</small>
+    </footer>
+
+    <script src="game.js" defer></script>
+  </body>
+</html>
