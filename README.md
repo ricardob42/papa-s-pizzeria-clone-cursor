@@ -1,22 +1,39 @@
-# Papa's Pizzeria Clone (Cursor Edition)
+# Mini Pizzería
 
-Welcome to the Papa's Pizzeria Clone! This project is a fan-made recreation of the classic "Papa's Pizzeria" game, built to run smoothly in the browser. It is designed for educational purposes and personal enjoyment, aiming to capture the fun and challenge of managing a pizza shop.
+Videojuego web inspirado en Papa’s Pizzeria: gestiona pedidos, prepara pizzas con toppings, controla el horneado y sirve a los clientes antes de que pierdan la paciencia. Incluye niveles progresivos, aumento de dificultad y sistema de puntuación.
 
-## Features
+## Jugar localmente
 
-- **Order Management:** Take customer orders and keep track of their preferences.
-- **Pizza Preparation:** Add toppings, bake, and slice pizzas according to customer requests.
-- **Customer Ratings:** Serve pizzas to earn tips and improve your shop's reputation.
-- **Game Progression:** Unlock new ingredients and face more demanding customers as you advance.
+- Abre `index.html` en tu navegador.
+- Controles:
+  - Selecciona un topping y haz clic en la pizza (canvas) para colocarlo.
+  - Usa los botones para añadir salsa y queso.
+  - Hornear para empezar a sumar tiempo de horneado, y detener cuando creas que está al punto.
+  - Servir para entregar al cliente, recibir puntuación y pasar al siguiente.
+  - Tirar si te equivocas (pierdes puntos).
 
-## Technologies Used
+## Niveles y dificultad
 
-- **JavaScript**: Main game logic and interactions.
-- **HTML5 & CSS3**: Structure and style for a responsive, engaging UI.
-- **Cursor**: Built to be compatible with the Cursor platform for enhanced development experience.
+- Cada día añade más clientes.
+- La paciencia se reduce más rápido con cada día.
+- Se desbloquean más toppings y se ajusta la tolerancia de horneado.
 
-## Getting Started
+## Despliegue en GitHub Pages
 
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/ricardob42/papa-s-pizzeria-clone-cursor.git
+Este proyecto es estático (HTML/CSS/JS sin dependencias).
+
+1. Sube los archivos a un repositorio de GitHub.
+2. Ve a Settings → Pages → Source: selecciona `main` y la carpeta `/root` (o `/docs` si mueves los archivos allí).
+3. Guarda. La página quedará disponible en unos minutos bajo la URL del repositorio.
+
+Si prefieres `/docs`:
+- Crea la carpeta `docs/` y mueve `index.html`, `styles.css`, `game.js` dentro.
+- Configura Pages para servir desde `docs/`.
+
+## Accesibilidad y rendimiento
+
+- Sin librerías externas (salvo Google Fonts opcional).
+- Canvas con gráficos simples pero claros.
+- Layout responsive para móviles.
+
+¡Disfruta! 🍕
